@@ -5,3 +5,205 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr, 10;
+    grid-template-rows: 1fr, 12;
+grid-template-areas: 
+"header header header header header header header header header header"
+"requerimiento main main main main main main main main estadisticas"
+"requerimiento main main main main main main main main estadisticas"
+"requerimiento main main main main main main main main estadisticas"
+"requerimiento main main main main main main main main estadisticas"
+"requerimiento main main main main main main main main estadisticas"
+"requerimiento main main main main main main main main estadisticas"
+"requerimiento main main main main main main main main estadisticas"
+"requerimiento main main main main main main main main estadisticas"
+"requerimiento main main main main main main main main estadisticas"
+"footer footer footer footer footer footer footer footer footer footer"
+"footer footer footer footer footer footer footer footer footer footer"
+;}
+
+.header{
+    grid-area: header;
+    /*background: red;*/
+}
+
+.container_title{
+    /*background: lawngreen;*/
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    color: var(--color-secundario);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vh;
+}
+
+.nav_izquierdo{
+    grid-area: requerimiento;
+    /*background: green;*/
+}
+
+.contenedor_nav{
+    /*background: red;*/
+    width: 90%;
+    height: 100%;
+}
+
+.contenedor_Allrequerimientos{
+    /*background: green;*/
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contenedor_requerimiento{
+    /*background: blue;*/
+    width: 100%;
+    height: 6.5vh;
+    display: flex;
+    list-style: none;
+}
+
+.emoji{
+    width: 20%;
+    height: 100%;
+}
+
+.contenedor_texto{
+    /*background: lightblue;*/
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.navIzq_h5{
+    font-size: 1.3vh;
+    text-transform: uppercase;
+}
+
+.navIzq_p{
+    font-size: 1.2vh;
+    text-transform: capitalize;
+}
+
+.main{
+    grid-area: main;
+    /*background: blue;*/
+}
+
+.contenedor_main{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: 
+    "tope tope tope"
+    "tope tope tope"
+    "izquierda cohete derecha"
+    "izquierda cohete derecha"
+    "texto cohete vacia"
+    "texto cohete vacia"
+    "abajo abajo abajo"
+;}
+
+.main_header{
+    /*background: lightgray;*/
+    grid-area: tope;
+}
+
+.cajas_izq{
+    /*background: orange;*/
+    grid-area: izquierda;
+}
+
+.cohete{
+    /*background: yellow;*/
+    grid-area: cohete;
+}
+
+.caja_der{
+    /*background: darkgoldenrod;*/
+    grid-area: derecha;
+}
+
+.caja_texto{
+    /*background: lightgreen;*/
+    grid-area: texto;
+}
+
+.caja_vacia{
+    /*background: lightblue;*/
+    grid-area: vacia;
+}
+
+.caja_bottom{
+    /*background: darkcyan;*/
+    grid-area: abajo;
+}
+
+.nav_derecho{
+    grid-area: estadisticas;
+    /*background: lightcoral;*/
+}
+
+.contenedorDer_requerimientosP1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contenedor_requerimientoDer{
+    /*background: blue;*/
+    width: 100%;
+    height: 6.5vh;
+    display: flex;
+    list-style: none;
+}
+
+.navDer_tituloYbarra{
+    /*background: lightyellow;*/
+    width: 55%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.navDer_h5{
+    font-size: 1.3vh;
+    text-transform: capitalize;
+}
+
+.navDer_texto{
+    /*background: yellow;*/
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.navDer_p{
+    font-size: 1.7vh;
+}
+
+.footer{
+    grid-area: footer;
+    /*background: yellow;*/
+}
