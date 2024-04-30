@@ -39,7 +39,7 @@ grid-template-areas:
 }
 
 .title{
-    color: var(--color-secundario);
+    color: var(--color-primario);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -78,6 +78,13 @@ grid-template-areas:
 .emoji{
     width: 20%;
     height: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.emoji i{
+    font-size: 3vh;
+    padding-right: 5px;
 }
 
 .contenedor_texto{
@@ -206,4 +213,40 @@ grid-template-areas:
 .footer{
     grid-area: footer;
     /*background: yellow;*/
+}
+
+.footer_contenedor{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.footer_nav{
+    background: darkkhaki;
+    width: 50%;
+    height: 80%;
+}
+
+.footer_listas{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.footer_listas a{
+    text-decoration: none;
+}
+
+.footer_listas i{
+    font-size: 3.5vh;
+}
+
+.footer_listas h5{
+    color: var(--color-primario);
 }
