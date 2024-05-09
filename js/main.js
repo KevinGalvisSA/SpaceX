@@ -1,5 +1,9 @@
+import { getAllRocketEngineTotal } from "./modules/rockets.js";
 import { 
-    app 
-} from "./modules/app";
+    paginationRockets
+} from "./modulesComponents/pagination.js";
 
-console.log(app());
+
+let paginacion = document.querySelector("#paginacion");
+paginacion.innerHTML = ""
+paginacion.append(await paginationRockets())
