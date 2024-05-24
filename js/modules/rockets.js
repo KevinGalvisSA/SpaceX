@@ -237,51 +237,7 @@ export const getAllRocketFirstStageThrustSeaLevelTotal = async()=>{
 }
 
 
-export const getAllRocketSecondStageThrust = async()=>{
-    let config = {
-        headers:{
-            "content-type": "application/json"
-        },
-        method: "POST",
-        body: JSON.stringify({
-            "options": {
-                "select": {
-                    "second_stage": 1
-                },
-                "sort": {
-                    "second_stage.thrust.kN": "desc"
-                }
-            }
-        })
-    }
-    let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
-    let {docs:[{second_stage} = maxEnginesRocket]} = await res.json();
-    return second_stage.thrust;
-}
-
-export const getAllRocketsFuelAmountTons = async()=>{
-    let config = {
-        headers:{
-            "content-type": "application/json"
-        },
-        method: "POST",
-        body: JSON.stringify({
-            "options": {
-                "select": {
-                    "first_stage": 1
-                },
-                "sort": {
-                    "first_stage.fuel_amount_tons": "desc"
-                }
-            }
-        })
-    }
-    let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
-    let {docs:[{first_stage} = maxEnginesRocket]} = await res.json();
-    return first_stage.fuel_amount_tons;
-}
-
-export const getAllRocketsSecondStageFuelAmountTons = async()=>{
+export const getAllRocketSecondStageFuelAmountTons= async()=>{
     let config = {
         headers:{
             "content-type": "application/json"
@@ -301,4 +257,49 @@ export const getAllRocketsSecondStageFuelAmountTons = async()=>{
     let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
     let {docs:[{second_stage} = maxEnginesRocket]} = await res.json();
     return second_stage.fuel_amount_tons;
+}
+
+
+export const getAllRocketsFirstStageBurnTimeSec = async()=>{
+    let config = {
+        headers:{
+            "content-type": "application/json"
+        },
+        method: "POST",
+        body: JSON.stringify({
+            "options": {
+                "select": {
+                    "first_stage": 1
+                },
+                "sort": {
+                    "first_stage.burn_time_sec": "desc"
+                }
+            }
+        })
+    }
+    let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
+    let {docs:[{first_stage} = maxEnginesRocket]} = await res.json();
+    return first_stage.burn_time_sec;
+}
+
+export const getAllRocketsSecondStageBurnTimeSec = async()=>{
+    let config = {
+        headers:{
+            "content-type": "application/json"
+        },
+        method: "POST",
+        body: JSON.stringify({
+            "options": {
+                "select": {
+                    "second_stage": 1
+                },
+                "sort": {
+                    "second_stage.burn_time_sec": "desc"
+                }
+            }
+        })
+    }
+    let res = await fetch("https://api.spacexdata.com/v4/rockets/query", config);
+    let {docs:[{second_stage} = maxEnginesRocket]} = await res.json();
+    return second_stage.burn_time_sec;
 }
